@@ -1,8 +1,11 @@
-import facebook from './Facebook.png';
-import github from './Github.png';
-import linkdin from './Linkdin.png';
+import facebook from './facebook.png';
+import github from './github.png';
+import linkdin from './linkdin.png';
 import logoB from './Logo-black.png';
 import logoW from './Logo-white.png';
 import mainimg from './Main-img.png';
+import reporticon from './report-icon.png';
+import meetingicon from './meeting-icon.png';
+import lawicon from './law-icon.png';
 
-export {facebook, github, linkdin, logoB, logoW, mainimg };
+export {facebook, github, linkdin, logoB, logoW, mainimg, reporticon, meetingicon, lawicon };

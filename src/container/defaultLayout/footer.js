@@ -8,9 +8,9 @@ export default class Footer extends React.Component{
       <footer className="footer" style={{width:window.screen.width}}>
         <div className="footer__wrapper">
           <div className="footer__wrapper__icons">
-            <a link="https://facebook.com"><img src={facebook} alt="facebook" className="footer__wrapper__icons__icon"/></a>
-            <a link="https://github.com/team-cocktail-glass"><img src={github} alt="github" className="footer__wrapper__icons__icon"/></a>
-            <a link="#"><img src={linkdin} alt="linkdin" className="footer__wrapper__icons__icon"/></a>
+            <a href="https://www.facebook.com/PolitictalkDSM/"><img src={facebook} alt="facebook" className="footer__wrapper__icons__icon"/></a>
+            <a href="https://github.com/team-cocktail-glass"><img src={github} alt="github" className="footer__wrapper__icons__icon"/></a>
+            <a href="#"><img src={linkdin} alt="linkdin" className="footer__wrapper__icons__icon"/></a>
           </div>
           <div className="footer__wrapper__developer">
             Web Front, Design - 백광민<br/>

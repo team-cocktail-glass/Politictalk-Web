@@ -1,32 +1,32 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Defaultlayout from './container/defaultLayout';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navigation from './container/defaultLayout/navigation';
 import Footer from './container/defaultLayout/footer';
+import { Main } from './container';
 
 import './App.scss';
+import 'react-router-modal/css/react-router-modal.css';
 
 export default class app extends React.Component{
   render(){
     return (
-      <Router>
+      <BrowserRouter>
         <div className="app">
           <Navigation/>
             <Switch>
               <Route path="/login" exact />
               <Route render={() => 
-                <Defaultlayout>
                   <Switch>
+                    <Route path="/" component={Main} exact />
                     <Route path="/report" exact />
                     <Route path="/meeting" exact />
                     <Route path="/law"  exact />
                   </Switch>
-                </Defaultlayout>
               } />
             </Switch>
           <Footer/>
         </div>
-      </Router>
+      </BrowserRouter>
     )
   }
 }
