@@ -1,0 +1,39 @@
+.Navigation{
+  position: fixed;
+  height: 70px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  &__contants{
+    position: relative;
+    width: 1366px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    &__img{
+      height: 40px;
+    }
+    &__links{
+      position: absolute;
+      right: 0;
+      height: 100%;
+      a:visited{
+        color: #505050;
+        text-decoration: none;
+      }
+      a:-webkit-any-link{
+        color: #505050;
+        text-decoration: none;
+      }
+      &__link{
+        font-size: 17px;
+        line-height: 70px;
+        margin-left: 30px;
+        &.--login{
+          margin-left: 150px
+        }
+      }
+    }
+  }
+}
