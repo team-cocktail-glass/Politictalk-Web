@@ -2,7 +2,7 @@ import React from 'react';
 import ContantsImg from '../defaultLayout/contantsimg';
 import Contants from '../defaultLayout/contants';
 import { mainimg } from '../../assets'
-import Explain from '../../components/main/explain';
+import { Explain, Imgcontants } from '../../components/main';
 
 import './index.scss';
 
@@ -17,6 +17,7 @@ export default class Main extends React.Component{
     return(
       <div>
         <ContantsImg imgs={mainimg}>
+          <Imgcontants/>
         </ContantsImg>
         <Contants>
           <div className="Main">
