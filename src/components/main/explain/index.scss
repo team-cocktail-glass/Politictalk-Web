@@ -1,0 +1,31 @@
+.explain{
+  position: relative;
+  top: 130px;
+  height: 230px;
+  border-bottom: solid 1px #e5e5e5;
+  &__wrapper{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__icon{
+      position: absolute;
+      left: 120px;
+      width: 160px;
+      height: 160px;
+      display: inline-block;
+    }
+    &__text{
+      position: absolute;
+      left: 350px;
+      display: inline-block;
+      font-size: 20px;
+      color: #000;
+    }
+  }
+  &_btn{
+    margin: 120px auto 0 auto;
+    
+  }
+}

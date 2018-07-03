@@ -5,7 +5,6 @@ import Footer from './container/defaultLayout/footer';
 import { Main } from './container';
 
 import './App.scss';
-import 'react-router-modal/css/react-router-modal.css';
 
 export default class app extends React.Component{
   render(){

@@ -3,3 +3,17 @@ body{
   color: #505050;
   font-family: 'Nanum Square';
 }
+.btn-on{
+  width: 250px;
+  height: 50px;
+  border-radius: 26px;
+  background-image: linear-gradient(225deg, #5a9ae3, #48b3db);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+  text-align: center;
+  cursor: pointer;
+  &__text{
+    color: #FFF;
+    font-size: 20px;
+    line-height: 50px;
+  }
+}

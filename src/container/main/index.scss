@@ -1,7 +1,7 @@
 .Main{
   height: 900px;
-  width: calc(100% - 268px);
-  padding: 80px 134px 0 134px;
+  width: calc(100% - 260px);
+  padding: 80px 130px 0 130px;
   &__service{
     display: block;
     width: 100%;
@@ -9,5 +9,37 @@
     text-align: center;
     color: #000;
     font-weight: 900;
+  }
+  &__ExplainMenu{
+    margin-top: 67px;
+    width: 100%;
+    text-align: center;
+    &__Menu{
+      margin-right: 240px;
+      font-size: 20px;
+      display: inline-block;
+      cursor: pointer;
+      &:after{
+        content: "";
+        position: relative;
+        top: 7.5px;
+        display: block;
+        width: 120px;
+        border-top: solid 4px transparent;
+      }
+      &.--last{
+        margin-right: 0;
+      }
+      &.--select{
+        &:after{
+          content: "";
+          position: relative;
+          top: 7.5px;
+          display: block;
+          width: 120px;
+          border-top: solid 4px #505050;
+        }
+      }
+    }
   }
 }
