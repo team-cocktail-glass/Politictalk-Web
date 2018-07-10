@@ -1,6 +1,6 @@
 import React from 'react';
-import ContantsImg from '../defaultLayout/contantsimg';
-import Contants from '../defaultLayout/contants';
+import ContantsImg from '../../components/defaultLayout/contantsimg';
+import Contants from '../../components/defaultLayout/contants';
 import { mainimg } from '../../assets'
 import { Explain, Imgcontants } from '../../components/main';
 

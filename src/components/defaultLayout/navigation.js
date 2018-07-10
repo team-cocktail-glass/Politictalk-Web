@@ -1,9 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { logoB } from './../../assets';
+import { SignOut } from './../../core/redux/actions/authAction';
 import './css/navigation.scss';
 
-export default class Navigation extends React.Component{
+class Navigation extends React.Component{
   render(){
     return(
       <div className="Navigation" style={{ width:window.screen.width}}>
@@ -27,14 +29,33 @@ export default class Navigation extends React.Component{
                 법안 제안
               </span>
             </Link>
-            <Link to="login">
-              <span className="Navigation__contants__links__link --login">
-                로그인
+            {this.props.JWT === "" ? 
+              <Link to="login">
+                <span className="Navigation__contants__links__link --login">
+                  로그인
+                </span>
+              </Link> :
+              <span className="Navigation__contants__links__link --login" onClick={()=>this.props.SignOut()}>
+                로그아웃
               </span>
-            </Link>
+            }
           </div>
         </div>
       </div>
     )
   }
 }
+
+function mapStateToProps(state){
+  return {
+    JWT: state.authReducer.JWT,
+  }
+}
+
+function mapDispatchToProps (dispatch){
+  return {
+    SignOut: () => dispatch(SignOut())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navigation);

@@ -1,7 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Navigation from './container/defaultLayout/navigation';
-import Footer from './container/defaultLayout/footer';
+import Navigation from './components/defaultLayout/navigation';
+import { Provider } from 'react-redux';
+import { store } from './core/redux/store/store';
+import Footer from './components/defaultLayout/footer';
 import { Main } from './container';
 
 import './App.scss';
@@ -9,23 +11,25 @@ import './App.scss';
 export default class app extends React.Component{
   render(){
     return (
-      <BrowserRouter>
-        <div className="app">
-          <Navigation/>
-            <Switch>
-              <Route path="/login" exact />
-              <Route render={() => 
-                  <Switch>
-                    <Route path="/" component={Main} exact />
-                    <Route path="/report" exact />
-                    <Route path="/meeting" exact />
-                    <Route path="/law"  exact />
-                  </Switch>
-              } />
-            </Switch>
-          <Footer/>
-        </div>
-      </BrowserRouter>
+      <Provider store={store}>
+        <BrowserRouter>
+          <div className="app">
+            <Navigation/>
+              <Switch>
+                <Route path="/login" exact />
+                <Route render={() => 
+                    <Switch>
+                      <Route path="/" component={Main} exact />
+                      <Route path="/report" exact />
+                      <Route path="/meeting" exact />
+                      <Route path="/law"  exact />
+                    </Switch>
+                } />
+              </Switch>
+            <Footer/>
+          </div>
+        </BrowserRouter>
+      </Provider>
     )
   }
 }

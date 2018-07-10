@@ -1,5 +1,5 @@
 import React from 'react';
-import Contants from './contants';
+import Contants from './../../components/defaultLayout/contants';
 
 
 export default class Defaultlayout extends React.Component{
