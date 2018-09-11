@@ -4,11 +4,11 @@ import Navigation from './components/defaultLayout/navigation';
 import { Provider } from 'react-redux';
 import { store } from './core/redux/store/store';
 import Footer from './components/defaultLayout/footer';
-import { Main } from './container';
+import { Main, ReportMain,ReportProfile } from './container';
 
 import './App.scss';
 
-export default class app extends React.Component{
+export default class App extends React.Component{
   render(){
     return (
       <Provider store={store}>
@@ -20,7 +20,9 @@ export default class app extends React.Component{
                 <Route render={() => 
                     <Switch>
                       <Route path="/" component={Main} exact />
-                      <Route path="/report" exact />
+                      <Route path="/report" component={ReportMain} exact />
+                      <Route path="/report/:uuid" component={ReportProfile} exact/>
+                      <Route path="/report/:uuid/:postid" component={ReportProfile} exact/>
                       <Route path="/meeting" exact />
                       <Route path="/law"  exact />
                     </Switch>

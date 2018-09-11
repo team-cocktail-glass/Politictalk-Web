@@ -1,0 +1,63 @@
+.ReportPeople{
+  position: relative;
+  width: 1221px;
+  height: 290px;
+  border-radius: 22px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: solid 0.5px #707070;
+  &__profile{
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 350px;
+    padding: 30px 0 20px 0;
+    height: calc(100% - 50px);
+    font-family: NanumSquareB;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    color: #3c3c3c;
+    border-right: solid 1px #e5e5e5;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    &__img{
+      border: solid 1px #000000;
+      border-radius: 100px;
+      margin: 0 auto 20px auto;
+    }
+    &__name{
+      font-size: 29px;
+    }
+  }
+  &__explain{
+    display: inline-block;
+    position: absolute;
+    left: 350px;
+    padding: 30px;
+    width: calc(1221px - 400px);
+    height: calc(100% - 60px);
+    font-size: 23px;
+    line-height: 1.5;
+    text-align: left;
+    color: #3c3c3c;
+    &__subexplan{
+      text-align: right;
+      margin-top: 150px;
+    }
+  }
+}
+.ReportProfile__write{
+  width: 87px;
+  height: 32px;
+  border-radius: 10px;
+  background-image: linear-gradient(219deg, #ea4335, #f74738);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);
+  font-size: 16px;
+  line-height: 32px;
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  right: 75px;
+  margin-top: 25px;
+}

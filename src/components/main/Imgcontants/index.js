@@ -16,13 +16,13 @@ export default class Imgcontants extends React.Component{
         </div>
         <div className="Imgcontants__explain">
           정치인한테 할 말은 있는데 어디에 써야될지 모르겠다면<br/>
-          Politictalk에서 간편하게 써서 정치인에게 의견을 제시하세요!
+          Politictalk에서 간편하게 작성해서 정치인에게 의견을 제시하세요!
         </div>
         {this.state.JWT === null || this.state.JWT === 'undefined' ?
         <div className="btn-on img_explain">
         <span className="btn-on__text">가입하고 의견제시하기</span>
       </div>
-        :''}
+        :null}
       </div>
     )
   }

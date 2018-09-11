@@ -24,6 +24,11 @@
       text-align: right;
       color: #fff;
       font-weight: 900;
+      line-height: 35px;
+      & a:visited{
+        color: #FFF;
+        text-decoration: none;
+      }
     }
     &__copyright{
       position: absolute;
