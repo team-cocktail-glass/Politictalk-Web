@@ -1,0 +1,71 @@
+
+.MeetingProfile__list{
+  margin-top: 75px;
+}
+.MeetingPostList{
+  position: relative;
+  width: 1180px;
+  height: 84px;
+  padding: 0 20px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  border: solid 1px #707070;
+  margin: 0 auto 20px auto;
+  line-height: 84px;
+  cursor: pointer;
+  &:hover{
+    background-color: #DDD;
+  }
+  &__title{
+    width: 690px;
+    font-size: 26px;
+    color: #242424;
+  }
+  &__Right{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    height: 84px;
+    &__date{
+      display: inline-block;
+      width: 130px;
+      height: 100%;
+      border-left: solid 1px #e5e5e5;
+      border-right: solid 1px #e5e5e5;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      right: 330px;
+    }
+    &__anthor{
+      display: inline-block;
+      width: 130px;
+      height: 100%;
+      border-right: solid 1px #e5e5e5;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      right: 200px;
+    }
+    &__people{
+      display: inline-block;
+      width: 130px;
+      height: 100%;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      right: 70px;
+      border-right: solid 1px #e5e5e5;
+      & .fas.fa-users{
+        font-size: 31px;
+        color: #ff0000;
+        text-shadow: 0 3px 6px 0 rgba(255, 0, 0, 0.16);
+        line-height: 84px;
+      }
+    }
+    &__Btn{
+      height: 40px;
+      margin: 22px 20px 0 0;
+    }
+  }
+}

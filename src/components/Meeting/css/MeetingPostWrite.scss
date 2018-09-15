@@ -1,0 +1,33 @@
+.MeetingPostWrite{
+  width: 1221px;
+  margin: 20px auto;
+  &__title{
+    width: 1221px;
+    height: 37px;
+    padding: 10px 20px;
+    border-radius: 28px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    background-color: #ffffff;
+    border: solid 1px #707070;
+    font-family: 'NanumSquare';
+    margin-top: 50px;
+    &:focus{
+      outline: none;
+    }
+  }
+  &__btn{
+    width: 87.5px;
+    height: 32.1px;
+    border-radius: 10px;
+    background-color: #ffa700;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);
+    font-family: NanumSquareR;
+    line-height: 32.1px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 25px;
+    position: absolute;
+    right: 70px;
+  }
+}

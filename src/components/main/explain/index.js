@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react';
+import {Link} from 'react-router-dom';
 import { meetingicon, lawicon, reporticon } from './../../../assets';
 
 import './index.css';
@@ -61,21 +62,27 @@ export default class Explain extends React.Component{
     switch(this.props.index){
       case 1:
         return (
+          <Link to="/report">
             <div className="btn-on explain_btn">
-          <span className="btn-on__text">불만 리포트 작성하기</span>
-        </div>  
+              <span className="btn-on__text">불만 리포트 작성하기</span>
+            </div>
+          </Link>  
         )
       case 2:
         return (
-          <div className="btn-on explain_btn">
-            <span className="btn-on__text">정치인에게 미팅 요청</span>
-          </div>
+          <Link to="/meeting">
+            <div className="btn-on explain_btn">
+              <span className="btn-on__text">정치인에게 미팅 요청</span>
+            </div>
+          </Link>
         )
       case 3:
         return (
-          <div className="btn-on explain_btn">
-            <span className="btn-on__text">법안 제안하러 가기</span>
-          </div>
+          <Link to="/law">
+            <div className="btn-on explain_btn">
+              <span className="btn-on__text">법안 제안하러 가기</span>
+            </div>
+          </Link>
         )
       default:
         break;

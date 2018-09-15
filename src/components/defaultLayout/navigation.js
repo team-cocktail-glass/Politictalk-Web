@@ -10,27 +10,27 @@ class Navigation extends React.Component{
     return(
       <div className="Navigation" style={{ width:window.screen.width}}>
         <div className="Navigation__contants">
-          <Link to="">
+          <Link to="/">
           <img src={logoB} alt="Politictalk 로고" className="Navigation__contants__img"/>
           </Link>
           <div className="Navigation__contants__links">
-            <Link to="report">
+            <Link to="/report">
               <span className="Navigation__contants__links__link">
                 불만 리포트
               </span>
             </Link>
-            <Link to="meeting">
+            <Link to="/meeting">
               <span className="Navigation__contants__links__link">
                 정치인 미팅
               </span>
             </Link>
-            <Link to="law">
+            <Link to="/law">
               <span className="Navigation__contants__links__link">
                 법안 제안
               </span>
             </Link>
             {this.props.JWT === "" ? 
-              <Link to="login">
+              <Link to="/login">
                 <span className="Navigation__contants__links__link --login">
                   로그인
                 </span>

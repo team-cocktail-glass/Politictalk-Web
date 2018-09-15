@@ -1,0 +1,25 @@
+
+.MeetingPostExplain{
+  &__explain{
+    width: 850px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #242424;
+    font-size: 30px;
+    margin-top: 44px;
+    span {
+      font-size: 23px;
+      line-height: 28px;
+      i {
+        font-size: 24px;
+      }
+    }
+    &__date{
+      text-align: right;
+      margin: 120px 30px 0 0;
+      font-size: 20px;
+    }
+  }
+}

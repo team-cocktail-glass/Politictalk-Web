@@ -16,7 +16,7 @@
   display: inline-block;
   width: 350px;
   padding: 30px 0 20px 0;
-  height: calc(100% - 50px);
+  height: 100%;
   font-family: NanumSquareB;
   font-size: 18px;
   line-height: 1.5;
@@ -39,9 +39,9 @@
 .ReportPeople__explain {
   display: inline-block;
   position: absolute;
-  left: 350px;
+  right: 0;
   padding: 30px;
-  width: calc(1221px - 400px);
+  width: calc(1221px - 350px);
   height: calc(100% - 60px);
   font-size: 23px;
   line-height: 1.5;

@@ -9,6 +9,8 @@ import meetingicon from './meeting-icon.png';
 import lawicon from './law-icon.png';
 import BackGroundDiscontent from './background-discontent.png';
 import ReportBtn from './ReportBtn.png';
+import MeetingBackGround from './Meeting_background.png';
+import MeetingBtn from './MeetingBtn.png';
 
 export {
   facebook,
@@ -21,5 +23,7 @@ export {
   meetingicon,
   lawicon,
   BackGroundDiscontent,
-  ReportBtn
+  MeetingBackGround,
+  ReportBtn,
+  MeetingBtn
 };
