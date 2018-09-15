@@ -1,0 +1,122 @@
+.ReportContents {
+  padding: 0 60px;
+  width: 1246px;
+  height: 1000px;
+}
+
+.ReportContents__place {
+  font-size: 29px;
+  color: #000;
+}
+
+.ReportContents__List {
+  position: relative;
+  margin-top: 40px;
+  width: 1246px;
+}
+
+.ReportContents__List__item {
+  margin-top: 15px;
+  width: 100%;
+  height: 140px;
+  border-radius: 22.5px;
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  background-color: #ffffff;
+  border: solid 0.5px #707070;
+  padding: 21px 0 21px 27px;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.ReportContents__List__item:hover {
+  background-color: #DDD;
+}
+
+.ReportContents__List__item__profile {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.ReportContents__List__item__profile__img {
+  display: inline-block;
+  border-radius: 50px;
+  border: solid 1px #000000;
+}
+
+.ReportContents__List__item__profile__contents {
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  left: 10px;
+  height: 100%;
+  font-size: 22px;
+  line-height: 1.5;
+  color: #3c3c3c;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.ReportContents__List__item__profile__contents:link {
+  text-decoration: none;
+  color: #3c3c3c;
+}
+
+.ReportContents__List__item__profile__contents:visited {
+  text-decoration: none;
+  color: #3c3c3c;
+}
+
+.ReportContents__List__item__profile__contents--Region {
+  font-size: 19px;
+}
+
+.ReportContents__List__item__contents {
+  position: absolute;
+  right: 0;
+  top: -16px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(100% - 420px);
+  height: 130px;
+}
+
+.ReportContents__List__item__contents__party {
+  display: block;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.ReportContents__List__item__contents__btn {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+}
+
+a:link {
+  text-decoration: none;
+  color: #3c3c3c;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #3c3c3c;
+}
+
+.fas.fa-fire {
+  color: red;
+  margin: 0 10px 0 0;
+  display: inline;
+  text-shadow: 0 3px 6px rgba(255, 0, 0, 0.16);
+}
+
+.fas.fa-users {
+  color: red;
+  margin: 0 10px;
+  text-shadow: 0 3px 6px rgba(255, 0, 0, 0.16);
+  display: inline;
+}
+/*# sourceMappingURL=ReportContents.css.map */

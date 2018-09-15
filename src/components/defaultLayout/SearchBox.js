@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './css/SearchBox.scss';
+import './css/SearchBox.css';
 import axios from 'axios';
 
 class SearchBox extends Component {

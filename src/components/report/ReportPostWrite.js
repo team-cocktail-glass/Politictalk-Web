@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactMde, {ReactMdeTypes} from 'react-mde'
 import * as Showdown from 'showdown';
 import 'react-mde/lib/styles/css/react-mde-all.css';
-import './css/ReportPostWrite.scss';
+import './css/ReportPostWrite.css';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 

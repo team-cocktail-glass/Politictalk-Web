@@ -1,0 +1,50 @@
+.Main {
+  height: 900px;
+  width: calc(100% - 260px);
+  padding: 80px 130px 0 130px;
+}
+
+.Main__service {
+  display: block;
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  color: #000;
+  font-weight: 900;
+}
+
+.Main__ExplainMenu {
+  margin-top: 67px;
+  width: 100%;
+  text-align: center;
+}
+
+.Main__ExplainMenu__Menu {
+  margin-right: 240px;
+  font-size: 20px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.Main__ExplainMenu__Menu:after {
+  content: "";
+  position: relative;
+  top: 7.5px;
+  display: block;
+  width: 120px;
+  border-top: solid 4px transparent;
+}
+
+.Main__ExplainMenu__Menu.--last {
+  margin-right: 0;
+}
+
+.Main__ExplainMenu__Menu.--select:after {
+  content: "";
+  position: relative;
+  top: 7.5px;
+  display: block;
+  width: 120px;
+  border-top: solid 4px #505050;
+}
+/*# sourceMappingURL=index.css.map */

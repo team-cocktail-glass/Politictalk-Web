@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/contantsimg.scss';
+import './css/contantsimg.css';
 
 export default class ContantsImg extends React.Component{
   render(){

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './css/ReportPeople.scss';
+import './css/ReportPeople.css';
 import axios from 'axios';
 
 class ReportPeople extends Component {

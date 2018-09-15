@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 import { meetingicon, lawicon, reporticon } from './../../../assets';
 
-import './index.scss';
+import './index.css';
 
 export default class Explain extends React.Component{
   render(){

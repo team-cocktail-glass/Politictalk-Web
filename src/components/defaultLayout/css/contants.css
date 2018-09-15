@@ -1,0 +1,23 @@
+.contants {
+  position: relative;
+  padding-bottom: 50px;
+  background-color: #f4f4f4;
+}
+
+.contants__wrapper {
+  background-color: #FFF;
+  width: 1366px;
+  height: calc( 100% + 95px);
+  margin: 0 auto;
+  position: relative;
+  top: -95px;
+  -webkit-box-shadow: 3px 0 6px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 3px 0 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+.background {
+  position: relative;
+  top: -70px;
+  height: 803px;
+}
+/*# sourceMappingURL=contants.css.map */

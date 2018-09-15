@@ -4,7 +4,7 @@ import Contants from '../../components/defaultLayout/contants';
 import { mainimg } from '../../assets'
 import { Explain, Imgcontants } from '../../components/main';
 
-import './index.scss';
+import './index.css';
 
 export default class Main extends React.Component{
   constructor(){

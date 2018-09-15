@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import './css/ReportPostContents.scss';
+import './css/ReportPostContents.css';
 import axios from 'axios';
 
 export default class ReportPostContents extends React.Component{

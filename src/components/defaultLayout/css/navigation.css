@@ -1,0 +1,52 @@
+.Navigation {
+  position: fixed;
+  height: 70px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.Navigation__contants {
+  position: relative;
+  width: 1366px;
+  margin: 0 auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Navigation__contants__img {
+  height: 40px;
+}
+
+.Navigation__contants__links {
+  position: absolute;
+  right: 0;
+  height: 100%;
+}
+
+.Navigation__contants__links a:visited {
+  color: #505050;
+  text-decoration: none;
+}
+
+.Navigation__contants__links a:-webkit-any-link {
+  color: #505050;
+  text-decoration: none;
+}
+
+.Navigation__contants__links__link {
+  font-size: 17px;
+  line-height: 70px;
+  margin-left: 30px;
+}
+
+.Navigation__contants__links__link.--login {
+  margin-left: 150px;
+}
+/*# sourceMappingURL=navigation.css.map */

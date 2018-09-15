@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/contants.scss';
+import './css/contants.css';
 
 export default class Contants extends React.Component{
   render(){

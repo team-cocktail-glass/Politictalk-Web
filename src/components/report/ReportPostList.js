@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './css/ReportPostList.scss';
+import './css/ReportPostList.css';
 import { ReportBtn } from '../../assets';
 import { Link } from 'react-router-dom';
 

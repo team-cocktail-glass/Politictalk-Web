@@ -1,0 +1,41 @@
+.explain {
+  position: relative;
+  top: 130px;
+  height: 230px;
+  border-bottom: solid 1px #e5e5e5;
+}
+
+.explain__wrapper {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.explain__wrapper__icon {
+  position: absolute;
+  left: 120px;
+  width: 160px;
+  height: 160px;
+  display: inline-block;
+}
+
+.explain__wrapper__text {
+  position: absolute;
+  left: 350px;
+  display: inline-block;
+  font-size: 20px;
+  color: #000;
+}
+
+.explain_btn {
+  margin: 120px auto 0 auto;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './css/ReportContents.scss';
+import './css/ReportContents.css';
 import ReportList from './ReportList';
 
 class ReportContents extends Component {

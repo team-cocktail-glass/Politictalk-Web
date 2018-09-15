@@ -6,7 +6,7 @@ import { store } from './core/redux/store/store';
 import Footer from './components/defaultLayout/footer';
 import { Main, ReportMain,ReportProfile, ReportPost, ReportWrite } from './container';
 
-import './App.scss';
+import './App.css';
 
 export default class App extends React.Component{
   render(){

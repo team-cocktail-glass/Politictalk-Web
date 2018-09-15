@@ -1,0 +1,22 @@
+.Imgcontants {
+  position: absolute;
+  top: 200px;
+  color: #FFF;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.Imgcontants__title {
+  font-size: 41px;
+  font-weight: 900;
+}
+
+.Imgcontants__explain {
+  margin-top: 50px;
+  font-size: 22px;
+  line-height: 2.27;
+}
+
+.img_explain {
+  margin-top: 30px;
+}
+/*# sourceMappingURL=index.css.map */

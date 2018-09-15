@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.scss';
+import './index.css';
 
 export default class Imgcontants extends React.Component{
   constructor(){

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './css/ReportPostExplain.scss';
+import './css/ReportPostExplain.css';
 
 class ReportPostExplain extends Component {
   constructor(){
