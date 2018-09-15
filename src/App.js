@@ -4,7 +4,7 @@ import Navigation from './components/defaultLayout/navigation';
 import { Provider } from 'react-redux';
 import { store } from './core/redux/store/store';
 import Footer from './components/defaultLayout/footer';
-import { Main, ReportMain,ReportProfile } from './container';
+import { Main, ReportMain,ReportProfile, ReportPost, ReportWrite } from './container';
 
 import './App.scss';
 
@@ -22,7 +22,8 @@ export default class App extends React.Component{
                       <Route path="/" component={Main} exact />
                       <Route path="/report" component={ReportMain} exact />
                       <Route path="/report/:uuid" component={ReportProfile} exact/>
-                      <Route path="/report/:uuid/:postid" component={ReportProfile} exact/>
+                      <Route path="/report/:uuid/write" component={ReportWrite} exact/>
+                      <Route path="/report/:uuid/:postid" component={ReportPost} exact/>
                       <Route path="/meeting" exact />
                       <Route path="/law"  exact />
                     </Switch>

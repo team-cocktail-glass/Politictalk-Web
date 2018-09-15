@@ -209,7 +209,7 @@ module.exports = {
           },
           {
             test: /\.scss$/,
-            loader: ExtractTextPlugin.extract('style', 'css?-autoprefixer!sass!postcss')
+            loader: ExtractTextPlugin.extract('style-loader', 'css?-autoprefixer!sass!postcss')
           },
           // "file" loader makes sure assets end up in the `build` folder.
           // When you `import` an asset, you get its filename.

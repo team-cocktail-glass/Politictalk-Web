@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
+import ReportPeople from '../../components/report/ReportPeople';
 import ContantsImg from '../../components/defaultLayout/contantsimg';
 import Contants from '../../components/defaultLayout/contants';
 import {BackGroundDiscontent} from '../../assets/index';
 import SearchBox from '../../components/defaultLayout/SearchBox';
-import ReportPeople from '../../components/report/ReportPeople';
-import ReportPostList from '../../components/report/ReportPostList';
-import {Link} from 'react-router-dom';
+import ReportPostWrite from '../../components/report/ReportPostWrite';
 
-class ReportProfile extends Component {
+class ReportWrite extends Component {
   render() { 
     return (
       <div>
@@ -22,27 +21,15 @@ class ReportProfile extends Component {
         </ContantsImg>
         <Contants>
           <SearchBox/>
-          <ReportPeople uuid={this.props.match.params.uuid}/>
-          <Link to={`/report/${this.props.match.params.uuid}/write`}>
-            <div className="ReportProfile__write">
-              글쓰기
-            </div>
-          </Link>
-          <div className="ReportProfile__list">
-            <ReportPostList/>
-            <ReportPostList/>
-            <ReportPostList/>
-            <ReportPostList/>
-            <ReportPostList/>
-            <ReportPostList/>
-            <ReportPostList/>
-            <ReportPostList/>
-            <ReportPostList/>
+          <div style={{fontFamily:'NanumSquare',fontSize:'27px', lineHeight:'2', color:'#505050',marginLeft:'80px',fontWeight:'700'}}>
+            불만 리포트 쓰기
           </div>
+          <ReportPeople/>
+          <ReportPostWrite/>
         </Contants>
       </div>
     );
   }
 }
  
-export default ReportProfile;
+export default ReportWrite;
