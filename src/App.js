@@ -4,6 +4,7 @@ import Navigation from './components/defaultLayout/navigation';
 import { Provider } from 'react-redux';
 import { store } from './core/redux/store/store';
 import Footer from './components/defaultLayout/footer';
+import { StickyContainer, Sticky } from 'react-sticky';
 import { Main, ReportMain,ReportProfile, ReportPost, ReportWrite, Meeting, MeetingPost, MeetingProfile, MeetingWrite } from './container';
 
 import './App.css';
@@ -14,7 +15,9 @@ export default class App extends React.Component{
       <Provider store={store}>
         <BrowserRouter>
           <div className="app">
-            <Navigation/>
+            <StickyContainer>
+              <Sticky>{({ style,distanceFromTop }) => <Navigation distanceFromTop={distanceFromTop}/>}</Sticky>
+              </StickyContainer>
               <Switch>
                 <Route path="/login" exact />
                 <Route render={() => 
@@ -33,6 +36,7 @@ export default class App extends React.Component{
                 } />
               </Switch>
             <Footer/>
+            
           </div>
         </BrowserRouter>
       </Provider>

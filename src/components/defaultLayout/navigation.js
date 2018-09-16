@@ -1,17 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { logoB } from './../../assets';
+import { logoB, logoW } from './../../assets';
 import { SignOut } from './../../core/redux/actions/authAction';
 import './css/navigation.css';
 
 class Navigation extends React.Component{
   render(){
+    const {distanceFromTop} = this.props;
     return(
-      <div className="Navigation" style={{ width:window.screen.width}}>
+      <div className={distanceFromTop > -3 ? `Navigation`: `Navigation Navigation__transparent`} style={{width:window.screen.width}}>
         <div className="Navigation__contants">
           <Link to="/">
+          {distanceFromTop > -3 ? <img src={logoW} alt="Politictalk 로고" className="Navigation__contants__img"/> :
           <img src={logoB} alt="Politictalk 로고" className="Navigation__contants__img"/>
+        }
           </Link>
           <div className="Navigation__contants__links">
             <Link to="/report">

@@ -1,10 +1,22 @@
 .Navigation {
   position: fixed;
   height: 70px;
-  background-color: #ffffff;
+  background-color: transparent;
+  z-index: 9999;
+}
+
+.Navigation__transparent {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #FFF;
   -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
-  z-index: 9999;
+}
+
+.Navigation__transparent .Navigation__contants__links__link {
+  color: #505050;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .Navigation__contants {
@@ -22,6 +34,8 @@
 
 .Navigation__contants__img {
   height: 40px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .Navigation__contants__links {
@@ -30,20 +44,14 @@
   height: 100%;
 }
 
-.Navigation__contants__links a:visited {
-  color: #505050;
-  text-decoration: none;
-}
-
-.Navigation__contants__links a:-webkit-any-link {
-  color: #505050;
-  text-decoration: none;
-}
-
 .Navigation__contants__links__link {
   font-size: 17px;
   line-height: 70px;
   margin-left: 30px;
+  color: #FFF;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .Navigation__contants__links__link.--login {
