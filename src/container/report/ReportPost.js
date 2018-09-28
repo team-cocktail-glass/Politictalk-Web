@@ -21,8 +21,8 @@ class ReportPost extends Component {
         </ContantsImg>
         <Contants>
           <SearchBox/>
-          <ReportPostExplain />
-          <ReportPostContents/>
+          <ReportPostExplain uuid={this.props.match.params.uuid} postid={this.props.match.params.postid}/>
+          <ReportPostContents uuid={this.props.match.params.uuid} postid={this.props.match.params.postid}/>
         </Contants>
       </div>
       

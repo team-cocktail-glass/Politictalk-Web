@@ -6,18 +6,18 @@ class MeetingPeople extends Component {
   constructor(props){
     super(props);
     this.state = {
-      name:"강창일",
-      email:'korea@korea.co.kr',
-      image: 'http://www.assembly.go.kr/photo/9770279.jpg',
-      position:"제주특별자치도 제주갑 국회의원",
-      party:"더불어민주당",
+      name: '',
+      education:'',
+      image: '',
+      position:"",
+      party:"",
       Meetingposts:5,
       MeetingPeople:35,
     }
   }
   render() {
     const {uuid} = this.props;
-    const {name, email, image, position, party, MeetingPeople, Meetingposts} = this.state;
+    const {name, education, image, position, party, MeetingPeople, Meetingposts} = this.state;
     return (
       <div className="MeetingPeople">
         <div className="MeetingPeople__profile">
@@ -28,13 +28,27 @@ class MeetingPeople extends Component {
         </div>
         <div className="MeetingPeople__explain">
           정당 - {party}<br/>
-          이메일 - <a href={`mailto:${email}`}>{email}</a> 
+          최종학력 - {education} 
           <div className="MeetingPeople__explain__subexplan">
             <i className="fas fa-fire"></i>{Meetingposts}건 <i className="fas fa-users"></i>{MeetingPeople}명
           </div>
         </div>
       </div>
     );
+  }
+  componentDidMount(){
+    axios.get('http://ec2.istruly.sexy:8080', {
+      params: {'politicianId': this.props.uuid}
+    }).then(res=> {
+      const {name, education, photo, region, position, party} = res.data;
+      this.setState({
+        name,
+        education,
+        image: photo,
+        position: `${region} ${position}`,
+        party,
+      })
+    })
   }
 }
  

@@ -29,15 +29,13 @@ class ReportProfile extends Component {
             </div>
           </Link>
           <div className="ReportProfile__list">
-            <ReportPostList/>
-            <ReportPostList/>
-            <ReportPostList/>
-            <ReportPostList/>
-            <ReportPostList/>
-            <ReportPostList/>
-            <ReportPostList/>
-            <ReportPostList/>
-            <ReportPostList/>
+            <ReportPostList uuid={this.props.match.params.uuid}/>
+            <ReportPostList uuid={this.props.match.params.uuid}/>
+            <ReportPostList uuid={this.props.match.params.uuid}/>
+            <ReportPostList uuid={this.props.match.params.uuid}/>
+            <ReportPostList uuid={this.props.match.params.uuid}/>
+            <ReportPostList uuid={this.props.match.params.uuid}/>
+            <ReportPostList uuid={this.props.match.params.uuid}/>
           </div>
         </Contants>
       </div>

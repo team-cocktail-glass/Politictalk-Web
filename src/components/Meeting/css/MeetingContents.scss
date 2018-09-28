@@ -2,7 +2,7 @@
 .MeetingContents{
   padding: 0 60px;
   width: 1246px;
-  height: 1000px;
+  height: auto;
   &__place{
     font-size: 29px;
     color: #000;
@@ -95,12 +95,12 @@ a{
     color:#ffa700;
     margin: 0 10px 0 0;
     display: inline;
-    text-shadow: 0 3px 6px rgba(255, 0, 0, 0.16);
+    text-shadow: 0 3px 6px rgba(255, 100, 0, 0.16);
   }
   &.fa-users{
     color:#ffa700;
     margin: 0 10px;
-    text-shadow: 0 3px 6px rgba(255, 0, 0, 0.16);
+    text-shadow: 0 3px 6px rgba(255, 100, 0, 0.16);
     display: inline;
   }
 }

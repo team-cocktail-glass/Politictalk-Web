@@ -19,7 +19,7 @@ class MeetingList extends Component {
               <div className="MeetingContents__List__item__contents">
                 <div className="MeetingContents__List__item__contents__party">
                   {party}<br/>
-                  <i className="fas fa-fire"></i>{Meetingposts}건 <i className="fas fa-users"></i>{MeetingPeople}명
+                  <i className="fas fa-users"></i>{MeetingPeople}명
                 </div>
                 <img className="MeetingContents__List__item__contents__btn" src={MeetingBtn} alt={`${name}님 프로필로 바로가기`}/>
               </div>

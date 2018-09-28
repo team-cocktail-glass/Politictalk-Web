@@ -13,6 +13,7 @@ class ReportPostList extends Component {
   }
   render() { 
     const {title, date, anthor, people, index} = this.state;
+    const {uuid} = this.props;
     return (
       <div className="ReportPostList">
         <span className="ReportPostList__title">
@@ -28,7 +29,7 @@ class ReportPostList extends Component {
           <span className="ReportPostList__Right__people">
             <i className="fas fa-users"/>{people}
           </span>
-          <Link to={`/report/1/${index}`}>
+          <Link to={`/report/${uuid}/${index}`}>
             <img src={ReportBtn} alt="바로가기" className="ReportPostList__Right__Btn"/>
           </Link>
         </div>
