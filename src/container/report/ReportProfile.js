@@ -6,8 +6,22 @@ import SearchBox from '../../components/defaultLayout/SearchBox';
 import ReportPeople from '../../components/report/ReportPeople';
 import ReportPostList from '../../components/report/ReportPostList';
 import {Link} from 'react-router-dom';
+import axios from 'axios';
 
 class ReportProfile extends Component {
+  state = {
+    list: [{
+      "recallId": "a5b4c07f3-6514-40ff-a587-fbb01c67b8ed",
+      "author": "dumi",
+      "date": "2018-10-03T01:34:13.847+0000",
+      "title": "어디가세요",
+      "content": "# 대마고도 오세",
+      "viewCount": 0,
+      "politicianId": "a5ba0991271eea65b5e68aa80",
+      "approve": [],
+      "disApprove": []
+    }]
+  }
   render() { 
     return (
       <div>
@@ -29,17 +43,29 @@ class ReportProfile extends Component {
             </div>
           </Link>
           <div className="ReportProfile__list">
-            <ReportPostList uuid={this.props.match.params.uuid}/>
-            <ReportPostList uuid={this.props.match.params.uuid}/>
-            <ReportPostList uuid={this.props.match.params.uuid}/>
-            <ReportPostList uuid={this.props.match.params.uuid}/>
-            <ReportPostList uuid={this.props.match.params.uuid}/>
-            <ReportPostList uuid={this.props.match.params.uuid}/>
-            <ReportPostList uuid={this.props.match.params.uuid}/>
+            {this.RenderPostList()}
           </div>
         </Contants>
       </div>
     );
+  }
+  componentDidMount() {
+    axios.get(`http://ec2.istruly.sexy:8080/recall/list/politician?politicianId=${this.props.match.params.uuid}`).then((res) => {
+      if(res.status === 200) {
+        this.setState({
+          list: res.data
+        });
+      } else {
+        this.setState({
+          list: []
+        });
+      }
+    })
+  }
+  RenderPostList() {
+      return this.state.list.map((post) => {
+        return <ReportPostList uuid={post.politicianId} index={post.recallId} anthor={post.author} date={post.date} title={post.title} content={post.content}/>
+      })
   }
 }
  

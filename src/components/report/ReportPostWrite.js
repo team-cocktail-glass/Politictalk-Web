@@ -14,6 +14,7 @@ class ReportPostWrite extends Component {
       mdeState: null
     }
     this.converter = new Showdown.Converter({tables: true, simplifiedAutoLink: true});
+    this.Posting = this.Posting.bind(this);
   }
 
   handleValueChange = (mdeState: ReactMdeTypes.MdeState) => {
@@ -22,7 +23,7 @@ class ReportPostWrite extends Component {
   render() { 
     return (
       <div className="ReportPostWrite">
-        <div className="ReportPostWrite__btn">
+        <div className="ReportPostWrite__btn" onClick={this.Posting}>
           글쓰기
         </div>
         <input type="text" className="ReportPostWrite__title" onChange={(e)=>this.setState({title: e.target.value})} placeholder="제목"/>
@@ -38,7 +39,7 @@ class ReportPostWrite extends Component {
   }
   Posting(){
     const {title, mdeState} = this.state;
-    const {uuid} = this.props.match.params;
+    const {uuid} = this.props;
     axios.post('http://ec2.istruly.sexy:8080/recall',
     {
       author: "dumi",
@@ -49,7 +50,7 @@ class ReportPostWrite extends Component {
   ).then(res=>{
     switch (res.status){
       case 200: 
-        <Redirect to={`/report/${uuid}`}/>
+        window.history.back();
         break;
       case 401:
       case 403:

@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import './css/ReportPostExplain.css';
+import axios from 'axios';
 
 class ReportPostExplain extends Component {
   constructor(){
     super();
     this.state = {
-      name:"강창일",
-      image: 'http://www.assembly.go.kr/photo/9770279.jpg',
-      position:"제주특별자치도 제주갑 국회의원",
-      title:"너무 이뻐요 누나아아",
+      name:"",
+      image: '',
+      position:"",
       ReportPeople:35,
-      anthor:"박진영",
       date: "2018.06.02"
     }
   }
   render() { 
-    const {name, image, position, title, ReportPeople, anthor, date} = this.state;
+    const {name, image, position,ReportPeople } = this.state;
+    const {title, anthor, date} = this.props;
     return (
       <div className="ReportPostExplain">
         <div className="ReportPostExplain ReportPeople">
@@ -36,6 +36,20 @@ class ReportPostExplain extends Component {
         </div>
       </div>
     );
+  }
+  componentDidMount(){
+    axios.get('http://ec2.istruly.sexy:8080/politician', {
+      params: {'politicianId': this.props.uuid}
+    }).then(res=> {
+      const {name, education, photo, region, position, party} = res.data;
+      this.setState({
+        name,
+        education,
+        image: photo,
+        position: `${region} ${position}`,
+        party,
+      })
+    })
   }
 }
  

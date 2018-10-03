@@ -5,9 +5,17 @@ import {BackGroundDiscontent} from '../../assets/index';
 import SearchBox from '../../components/defaultLayout/SearchBox';
 import ReportPostExplain from '../../components/report/ReportPostExplain';
 import ReportPostContents from '../../components/report/ReportPostContents';
+import axios from 'axios';
 
 class ReportPost extends Component {
+  state = {
+    author: '',
+    date: '',
+    title: '',
+    content: ''
+  }
   render() { 
+    const { author, date, title, content } = this.state;
     return (
       <div>
         <ContantsImg imgs={BackGroundDiscontent}>
@@ -21,12 +29,21 @@ class ReportPost extends Component {
         </ContantsImg>
         <Contants>
           <SearchBox/>
-          <ReportPostExplain uuid={this.props.match.params.uuid} postid={this.props.match.params.postid}/>
-          <ReportPostContents uuid={this.props.match.params.uuid} postid={this.props.match.params.postid}/>
+          <ReportPostExplain uuid={this.props.match.params.uuid} postid={this.props.match.params.postid} author={author} date={date} title={title}/>
+          <ReportPostContents uuid={this.props.match.params.uuid} postid={this.props.match.params.postid} content={content}/>
         </Contants>
       </div>
-      
     );
+  }
+  componentDidMount() {
+    axios.get(`http://ec2.istruly.sexy:8080/recall?recallId=${this.props.match.params.postid}`).then((res) => {
+      this.setState({
+        author: res.data.author,
+        date: res.data.date.substring(0, 10),
+        title: res.data.title,
+        content: res.data.content,
+      })
+    })
   }
 }
  

@@ -49,7 +49,7 @@ class MeetingPostWrite extends Component {
   ).then(res=>{
     switch (res.status){
       case 200: 
-        <Redirect to={`/meeting/${uuid}`}/>
+        window.history.back();
         break;
       case 401:
       case 403:

@@ -24,8 +24,8 @@ class ReportWrite extends Component {
           <div style={{fontFamily:'NanumSquare',fontSize:'27px', lineHeight:'2', color:'#505050',marginLeft:'80px',fontWeight:'700'}}>
             불만 리포트 쓰기
           </div>
-          <ReportPeople/>
-          <ReportPostWrite/>
+          <ReportPeople uuid={this.props.match.params.uuid}/>
+          <ReportPostWrite uuid={this.props.match.params.uuid}/>
         </Contants>
       </div>
     );

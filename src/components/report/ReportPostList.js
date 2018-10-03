@@ -4,16 +4,9 @@ import { ReportBtn } from '../../assets';
 import { Link } from 'react-router-dom';
 
 class ReportPostList extends Component {
-  state = {
-    title: '너무 이뻐요 누나아아',
-    date: '2018.06.02',
-    anthor: '박진영',
-    people: 40,
-    index: 1,
-  }
   render() { 
-    const {title, date, anthor, people, index} = this.state;
-    const {uuid} = this.props;
+    const {uuid, title, anthor, people, index} = this.props;
+    const date = this.props.date.substring(0, 10);
     return (
       <div className="ReportPostList">
         <span className="ReportPostList__title">
