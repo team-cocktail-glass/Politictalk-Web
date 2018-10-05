@@ -35,7 +35,7 @@ class Navigation extends React.Component{
             {this.props.JWT === "" ? 
               <Link to="/login">
                 <span className="Navigation__contants__links__link --login">
-                  로그인
+                  dumi님
                 </span>
               </Link> :
               <span className="Navigation__contants__links__link --login" onClick={()=>this.props.SignOut()}>

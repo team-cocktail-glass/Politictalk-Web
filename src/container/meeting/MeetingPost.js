@@ -5,9 +5,17 @@ import {MeetingBackGround} from '../../assets/index';
 import SearchBox from '../../components/defaultLayout/SearchBox';
 import MeetingPostExplain from '../../components/Meeting/MeetingPostExplain';
 import MeetingPostContents from '../../components/Meeting/MeetingPostContents';
+import axios from 'axios';
 
 class MeetingPost extends Component {
-  render() { 
+  state = {
+    author: '',
+    date: '',
+    title: '',
+    content: ''
+  }
+  render() {
+    const { author, date, title, content } = this.state;
     return (
       <div>
         <ContantsImg imgs={MeetingBackGround}>
@@ -23,12 +31,21 @@ class MeetingPost extends Component {
         </ContantsImg>
         <Contants>
           <SearchBox/>
-          <MeetingPostExplain />
-          <MeetingPostContents/>
+          <MeetingPostExplain uuid={this.props.match.params.uuid} postid={this.props.match.params.postid} author={author} date={date} title={title}/>
+          <MeetingPostContents uuid={this.props.match.params.uuid} postid={this.props.match.params.postid} content={content}/>
         </Contants>
       </div>
-      
     );
+  }
+  componentDidMount() {
+    axios.get(`http://ec2.istruly.sexy:8080/meeting?meetingId=${this.props.match.params.postid}`).then((res) => {
+      this.setState({
+        author: res.data.author,
+        date: res.data.date.substring(0, 10),
+        title: res.data.title,
+        content: res.data.content,
+      })
+    })
   }
 }
  

@@ -16,7 +16,7 @@ export default class MeetingPostContents extends React.Component{
     )
   }
   vote(){
-    axios.patch("http://ec2.istruly.sexy:8080/recall/vote", 
+    axios.patch("http://ec2.istruly.sexy:8080/meeting/vote", 
     {
       "recallId": "string",
       "userId": "string"

@@ -11,7 +11,6 @@ class MeetingPeople extends Component {
       image: '',
       position:"",
       party:"",
-      Meetingposts:5,
       MeetingPeople:35,
     }
   }
@@ -30,14 +29,14 @@ class MeetingPeople extends Component {
           정당 - {party}<br/>
           최종학력 - {education} 
           <div className="MeetingPeople__explain__subexplan">
-            <i className="fas fa-fire"></i>{Meetingposts}건 <i className="fas fa-users"></i>{MeetingPeople}명
+            <i className="fas fa-users"></i>{MeetingPeople}명
           </div>
         </div>
       </div>
     );
   }
   componentDidMount(){
-    axios.get('http://ec2.istruly.sexy:8080', {
+    axios.get('http://ec2.istruly.sexy:8080/politician', {
       params: {'politicianId': this.props.uuid}
     }).then(res=> {
       const {name, education, photo, region, position, party} = res.data;

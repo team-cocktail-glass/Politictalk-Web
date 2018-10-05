@@ -4,15 +4,9 @@ import { MeetingBtn } from '../../assets';
 import { Link } from 'react-router-dom';
 
 class MeetingPostList extends Component {
-  state = {
-    title: '너무 이뻐요 누나아아',
-    date: '2018.06.02',
-    anthor: '박진영',
-    people: 40,
-    index: 1,
-  }
   render() { 
-    const {title, date, anthor, people, index} = this.state;
+    const {uuid, title, anthor, people, index} = this.props;
+    const date = this.props.date.substring(0, 10);
     return (
       <div className="MeetingPostList">
         <span className="MeetingPostList__title">
@@ -28,7 +22,7 @@ class MeetingPostList extends Component {
           <span className="MeetingPostList__Right__people">
             <i className="fas fa-users"/>{people}
           </span>
-          <Link to={`/meeting/1/${index}`}>
+          <Link to={`/meeting/${uuid}/${index}`}>
             <img src={MeetingBtn} alt="바로가기" className="MeetingPostList__Right__Btn"/>
           </Link>
         </div>

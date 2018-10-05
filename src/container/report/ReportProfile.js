@@ -50,7 +50,7 @@ class ReportProfile extends Component {
     );
   }
   componentDidMount() {
-    axios.get(`http://ec2.istruly.sexy:8080/recall/list/politician?politicianId=${this.props.match.params.uuid}`).then((res) => {
+    axios.get(`http://ec2.istruly.sexy:8080/meeting/list/politician?politicianId=${this.props.match.params.uuid}`).then((res) => {
       if(res.status === 200) {
         this.setState({
           list: res.data

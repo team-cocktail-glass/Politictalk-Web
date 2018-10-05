@@ -5,7 +5,7 @@ import {MeetingBtn} from '../../assets/index';
 
 class MeetingList extends Component {
   render() { 
-    const {index, name, image ,position, party, Meetingposts, MeetingPeople} = this.props;
+    const {index, name, image ,position, party, MeetingPeople} = this.props;
     return (
       <div className="MeetingContents__List__item">
         <Link to={`/meeting/${index}`}>

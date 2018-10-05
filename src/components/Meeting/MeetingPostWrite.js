@@ -14,6 +14,7 @@ class MeetingPostWrite extends Component {
       mdeState: null
     }
     this.converter = new Showdown.Converter({tables: true, simplifiedAutoLink: true});
+    this.Posting = this.Posting.bind(this);
   }
 
   handleValueChange = (mdeState: ReactMdeTypes.MdeState) => {
@@ -22,7 +23,7 @@ class MeetingPostWrite extends Component {
   render() { 
     return (
       <div className="MeetingPostWrite">
-        <div className="MeetingPostWrite__btn">
+        <div className="MeetingPostWrite__btn" onClick={this.Posting}>
           글쓰기
         </div>
         <input type="text" className="MeetingPostWrite__title" onChange={(e)=>this.setState({title: e.target.value})} placeholder="제목"/>
@@ -38,8 +39,8 @@ class MeetingPostWrite extends Component {
   }
   Posting(){
     const {title, mdeState} = this.state;
-    const {uuid} = this.props.match.params;
-    axios.post('http://ec2.istruly.sexy:8080/recall',
+    const {uuid} = this.props;
+    axios.post('http://ec2.istruly.sexy:8080/meeting',
     {
       author: "dumi",
       content: mdeState.markdown,
@@ -48,7 +49,7 @@ class MeetingPostWrite extends Component {
     }
   ).then(res=>{
     switch (res.status){
-      case 200: 
+      case 201: 
         window.history.back();
         break;
       case 401:

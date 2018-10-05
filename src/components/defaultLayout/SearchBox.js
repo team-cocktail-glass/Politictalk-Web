@@ -10,26 +10,28 @@ class SearchBox extends Component {
     this.state = {
       context: ''
     }
+    this.SendRequest = this.SendRequest.bind(this)
   }
   render() { 
     return (
-      <div className="SearchBox">
+      <form className="SearchBox" onSubmit={(event)=>this.SendRequest(event)}>
         <div className="SearchBox__contents">
           <input type="text" className="SearchBox__contents__input" onChange={(e)=>this.setState({context: e.target.value})}
           placeholder="정치인 이름이나 지역구를 적어주세요. ex) 서울시 강남구, 홍길동"
           />
-          <div className="SearchBox__contents__btn" onClick={()=>this.SendRequest(this.state.context)}>
+          <button type="submit" className="SearchBox__contents__btn">
             <i className="fas fa-search"></i>
-          </div>
+          </button>
         </div>
-      </div>
+      </form>
     );
   }
-  SendRequest(context){
+  SendRequest(e){
+    const {context} = this.state;
     axios.get(`http://ec2.istruly.sexy:8080/politician/list?region=${context}&position=null&name=null`).then((res)=> {
       this.props.changeLocation(context, res.data);
     })
-    
+    e.preventDefault();
   }
 }
 

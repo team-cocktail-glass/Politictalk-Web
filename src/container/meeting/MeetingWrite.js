@@ -26,8 +26,8 @@ class MeetingWrite extends Component {
           <div style={{fontFamily:'NanumSquare',fontSize:'27px', lineHeight:'2', color:'#505050',marginLeft:'80px',fontWeight:'700'}}>
             정치인 미팅 신청
           </div>
-          <MeetingPeople/>
-          <MeetingPostWrite/>
+          <MeetingPeople  uuid={this.props.match.params.uuid}/>
+          <MeetingPostWrite  uuid={this.props.match.params.uuid}/>
         </Contants>
       </div>
     );

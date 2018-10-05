@@ -6,8 +6,22 @@ import MeetingPeople from '../../components/Meeting/MeetingPeople';
 import MeetingPostList from '../../components/Meeting/MeetingPostList';
 import {Link} from 'react-router-dom';
 import {MeetingBackGround} from '../../assets/index';
+import axios from 'axios';
 
 class MeetingProfile extends Component {
+  state = {
+    list: [{
+      "recallId": "a5b4c07f3-6514-40ff-a587-fbb01c67b8ed",
+      "author": "dumi",
+      "date": "2018-10-03T01:34:13.847+0000",
+      "title": "어디가세요",
+      "content": "# 대마고도 오세",
+      "viewCount": 0,
+      "politicianId": "a5ba0991271eea65b5e68aa80",
+      "approve": [],
+      "disApprove": []
+    }]
+  }
   render() { 
     return (
       <div>
@@ -31,19 +45,29 @@ class MeetingProfile extends Component {
             </div>
           </Link>
           <div className="MeetingProfile__list">
-            <MeetingPostList/>
-            <MeetingPostList/>
-            <MeetingPostList/>
-            <MeetingPostList/>
-            <MeetingPostList/>
-            <MeetingPostList/>
-            <MeetingPostList/>
-            <MeetingPostList/>
-            <MeetingPostList/>
+            {this.RenderPostList()}
           </div>
         </Contants>
       </div>
     );
+  }
+  componentDidMount() {
+    axios.get(`http://ec2.istruly.sexy:8080/meeting/list/politician?politicianId=${this.props.match.params.uuid}`).then((res) => {
+      if(res.status === 200) {
+        this.setState({
+          list: res.data
+        });
+      } else {
+        this.setState({
+          list: []
+        });
+      }
+    })
+  }
+  RenderPostList() {
+      return this.state.list.map((post) => {
+        return <MeetingPostList uuid={post.politicianId} index={post.meetingId} anthor={post.author} date={post.date} title={post.title} content={post.content}/>
+      })
   }
 }
  
